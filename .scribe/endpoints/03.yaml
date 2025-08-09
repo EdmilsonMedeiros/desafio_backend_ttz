@@ -1,0 +1,318 @@
+name: Items
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/items/top
+    metadata:
+      groupName: Items
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /items/top → itens mais coletados'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      limit:
+        name: limit
+        description: 'Opcional. Número máximo de itens a serem exibidos.'
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      sort_by:
+        name: sort_by
+        description: 'Opcional. Campo pelo qual a lista será ordenada.'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      limit: 16
+      sort_by: architecto
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+              "success": true,
+              "data": {
+                  "sorted_by": "total_pickups",
+                  "items": [
+                      {
+                          "rank": 1,   
+                          "name": "Item 1",
+                          "total_pickups": 100,
+                          "total_quantity": 500,
+                          "avg_quantity_per_pickup": 5
+                      },
+                      {
+                          "rank": 2,
+                          "name": "Item 2",
+                          "total_pickups": 80,
+                          "total_quantity": 400,
+                          "avg_quantity_per_pickup": 5
+                      }
+                  ]
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/items
+    metadata:
+      groupName: Items
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /items → lista todos os itens com estatísticas'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      search:
+        name: search
+        description: 'Opcional. Nome do item a ser buscado.'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      sort_by:
+        name: sort_by
+        description: 'Opcional. Campo pelo qual a lista será ordenada.'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      sort_dir:
+        name: sort_dir
+        description: 'Opcional. Direção da ordenação.'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      per_page:
+        name: per_page
+        description: 'Opcional. Número de itens por página.'
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      page:
+        name: page
+        description: 'Opcional. Número da página a ser exibida.'
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      search: architecto
+      sort_by: architecto
+      sort_dir: architecto
+      per_page: 16
+      page: 16
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+              "success": true,
+              "data": {
+                  "items": [
+                      {
+                          "name": "Item 1",
+                          "total_pickups": 100,
+                          "total_quantity": 500,
+                          "avg_quantity_per_pickup": 5
+                      },
+                      {
+                          "name": "Item 2",
+                          "total_pickups": 80,
+                          "total_quantity": 400,
+                          "avg_quantity_per_pickup": 5
+                      }
+                  ],
+                  "pagination": {
+                      "current_page": 1,
+                      "last_page": 1,
+                      "per_page": 20,
+                      "total": 2
+                  }
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/items/{itemName}/stats'
+    metadata:
+      groupName: Items
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /items/:name/stats → estatísticas detalhadas de um item'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      itemName:
+        name: itemName
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      itemName: architecto
+    queryParameters:
+      item_name:
+        name: item_name
+        description: 'O nome do item.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      item_name: architecto
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+              "success": true,
+              "data": {
+                  "item_info": {
+                      "name": "Item 1",
+                      "total_pickups": 100,
+                      "total_quantity": 500,
+                      "avg_quantity_per_pickup": 5
+                  },
+                  "top_collectors": [
+                      {
+                          "player_id": "p1",
+                          "player_name": "Jogador 1",
+                          "total_pickups": 100,
+                          "total_quantity": 500,
+                          "last_pickup": "2025-08-09T22:48:46.000000Z"
+                      },
+                      {
+                          "player_id": "p2",
+                          "player_name": "Jogador 2",
+                          "total_pickups": 80,
+                          "total_quantity": 400,
+                          "last_pickup": "2025-08-09T22:48:46.000000Z"
+                      }
+                  ],
+                  "pickup_locations": [
+                      {
+                          "location": "Zona 1",
+                          "total_pickups": 100,
+                          "total_quantity": 500
+                      },
+                      {
+                          "location": "Zona 2",
+                          "total_pickups": 80,
+                          "total_quantity": 400
+                      }
+                  ],
+                  "recent_pickups": [
+                      {
+                          "timestamp": "2025-08-09T22:48:46.000000Z",
+                          "player_id": "p1",
+                          "player_name": "Jogador 1",
+                          "quantity": 10,
+                          "location": "Zona 1"
+                      },
+                      {
+                          "timestamp": "2025-08-09T22:48:46.000000Z",
+                          "player_id": "p2",
+                          "player_name": "Jogador 2",
+                          "quantity": 5,
+                          "location": "Zona 2"
+                      }
+                  }
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

@@ -1,0 +1,234 @@
+name: Events
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/events
+    metadata:
+      groupName: Events
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /events → últimos eventos com filtros'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      category:
+        name: category
+        description: 'Opcional. Categoria do evento.'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      event_type:
+        name: event_type
+        description: 'Opcional. Tipo de evento.'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      player_id:
+        name: player_id
+        description: 'Opcional. ID do jogador.'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      date_from:
+        name: date_from
+        description: 'Opcional. Data inicial para o filtro.'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      date_to:
+        name: date_to
+        description: 'Opcional. Data final para o filtro.'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      limit:
+        name: limit
+        description: 'Opcional. Número máximo de eventos a serem retornados.'
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      category: architecto
+      event_type: architecto
+      player_id: architecto
+      date_from: architecto
+      date_to: architecto
+      limit: 16
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+              "success": true,
+              "data": [
+                  {
+                      "id": 1,
+                      "timestamp": "2025-08-09T22:48:46.000000Z",
+                      "category": "combat",
+                      "event_type": "BOSS_DEFEAT",
+                      "player_id": "p1",
+                      "player_name": "Jogador 1",
+                      "event_data": {
+                          "boss_name": "Boss 1",
+                          "defeated_by": "Jogador 2"
+                      },
+                      "description": "Jogador 1 derrotou Boss 1"
+                  },
+                  {
+                      "id": 2,
+                      "timestamp": "2025-08-09T22:48:46.000000Z",
+                      "category": "progression",
+                      "event_type": "QUEST_COMPLETE",
+                      "player_id": "p2",
+                      "player_name": "Jogador 2",
+                      "event_data": {
+                          "name": "Quest 1",
+                          "quest_id": "q1"
+                      },
+                      "description": "Jogador 2 completou Quest 1"
+                  }
+              ],
+              "total": 2,
+              "limit": 50  
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/events/summary
+    metadata:
+      groupName: Events
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /events/summary → resumo de eventos por categoria/tipo'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      date_from:
+        name: date_from
+        description: 'Opcional. Data inicial para o resumo.'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      date_to:
+        name: date_to
+        description: 'Opcional. Data final para o resumo.'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      date_from: architecto
+      date_to: architecto
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+              "success": true,
+              "data": {
+                  "total_events": 100,
+                  "date_range": {
+                      "from": "2025-08-01 00:00:00",
+                      "to": "2025-08-07 23:59:59"
+                  },
+                  "by_category": {
+                      "combat": 30,
+                      "progression": 20,
+                      "social": 15,
+                      "other": 35
+                  },
+                  "by_event_type": {
+                      "BOSS_DEFEAT": 30,
+                      "QUEST_COMPLETE": 20,
+                      "ITEM_PICKUP": 15,
+                      "DEATH": 35
+                  },
+                  "most_active_players": [
+                      {
+                          "player_id": "p1",
+                          "player_name": "Jogador 1",
+                          "total_events": 100
+                      },
+                      {
+                          "player_id": "p2",
+                          "player_name": "Jogador 2",
+                          "total_events": 80
+                      }
+                  }
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

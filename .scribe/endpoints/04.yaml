@@ -1,0 +1,126 @@
+name: Dashboard
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/dashboard
+    metadata:
+      groupName: Dashboard
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /dashboard → métricas do dashboard'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      hours:
+        name: hours
+        description: 'Opcional. Intervalo em horas para as métricas.'
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      hours: 16
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+              "success": true,
+              "data": {
+                  "time_range": {
+                      "from": "2025-08-09 00:00:00",
+                      "to": "2025-08-09 23:59:59",
+                      "hours": 24
+                  },
+                  "players": {
+                      "total_players": 100,
+                      "active_players": 50,
+                      "new_players": 20,
+                      "activity_rate": 50.00
+                  },
+                  "combat": {
+                      "total_deaths": 100,
+                      "bosses_defeated": 50,
+                      "players_with_most_deaths": [
+                          {
+                              "player_id": "p1",
+                              "player_name": "Jogador 1",
+                              "death_count": 10
+                          },
+                          {
+                              "player_id": "p2",
+                              "player_name": "Jogador 2",
+                              "death_count": 8
+                          }
+                      ]
+                  },
+                  "economy": {
+                      "total_xp_gained": 10000,
+                      "total_gold_gained": 500,
+                      "avg_xp_per_player": 100,
+                      "avg_gold_per_player": 5
+                  },
+                  "activity": {
+                      "total_events": 1000,
+                      "chat_messages": 500,
+                      "quests_completed": 200,
+                      "avg_events_per_hour": 41.67
+                  },
+                  "items": {
+                      "total_items_picked": 1000,
+                      "total_pickup_events": 500,
+                      "most_collected_items": [
+                          {
+                              "item": "Item 1",
+                              "pickups": 100,
+                              "total_quantity": 500
+                          },
+                          {
+                              "item": "Item 2",
+                              "pickups": 80,
+                              "total_quantity": 400
+                          }
+                      ]
+                  },
+                  "bosses": {
+                      "total_boss_fights": 100,
+                      "total_boss_defeats": 50,
+                      "bosses_defeated": [
+                          {
+                              "boss_name": "Boss 1",
+                              "defeats": 10
+                          },
+                          {
+                              "boss_name": "Boss 2",
+                              "defeats": 8
+                          }
+                      ]
+                  }
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
