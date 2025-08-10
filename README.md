@@ -64,7 +64,7 @@ Este projeto foi desenvolvido para processar e analisar logs de jogos, extraindo
 
 #### Sistema de Jobs
 - ✅ **Processamento em background** via Laravel Queue
-- ✅ **Sistema de retry** com backoff exponencial
+- ✅ **Sistema de retry** com backoff exponencial (re-tentativas dos jobs com intervalos)
 - ✅ **Monitoramento de status** de processamento
 - ✅ **Logs detalhados** de processamento
 
@@ -83,12 +83,11 @@ Este projeto foi desenvolvido para processar e analisar logs de jogos, extraindo
 
 ## 🛠 Tecnologias
 
-- **Framework:** Laravel 11.x
+- **Framework:** Laravel ^12.0
 - **Banco de Dados:** MySQL 8.0+
 - **Autenticação:** Laravel Sanctum
 - **Queue:** Laravel Queue (Database/Redis)
 - **PHP:** 8.2+
-- **Cache:** Redis (opcional)
 
 ## 🚀 Instalação
 
@@ -96,11 +95,10 @@ Este projeto foi desenvolvido para processar e analisar logs de jogos, extraindo
 - PHP 8.2 ou superior
 - Composer
 - MySQL 8.0 ou superior
-- Node.js (para assets, se necessário)
 
 ### 1. Clone o Repositório
 ```bash
-git clone [SEU_REPOSITÓRIO_AQUI]
+git clone [https://github.com/EdmilsonMedeiros/desafio_backend_ttz.git]
 cd api_ttz_project
 ```
 
@@ -156,23 +154,10 @@ Para processar arquivos em background, execute:
 php artisan queue:work --tries=3 --timeout=300
 ```
 
-### Supervisor (Produção)
-Para ambiente de produção, configure o Supervisor:
-```ini
-[program:game-log-worker]
-process_name=%(program_name)s_%(process_num)02d
-command=php /path/to/your/project/artisan queue:work --sleep=3 --tries=3 --max-time=3600
-directory=/path/to/your/project
-autostart=true
-autorestart=true
-numprocs=2
-user=www-data
+### Para servir a aplicação
+```bash
+php artisan serve
 ```
 
-## 📖 Uso da API
-
-### Autenticação
-Para endpoints protegidos, inclua o token no header:
-```
-Authorization: Bearer {
-```
+## 📄 Documentação da API
+Ao acessar a rota raíz do projeto, você encontrará um botão linkado com a documentação da API com todas as informações necessárias para utilizar. Também, neste link [https://link] está disponível um arquivo insomnia para importação de todas as rotas já configuradas e com paramêtros para facilitar os testes.
