@@ -18,6 +18,8 @@ Uma API Laravel robusta para análise de logs de jogos, processamento de eventos
 
 ## 🎮 Sobre o Projeto
 
+[Vídeo de Apresentação](https://drive.google.com/file/d/1IuTl6k5EZt-HpNUb7zRty3aH0qsWPjJ2/view?usp=sharing)
+
 Este projeto foi desenvolvido para processar e analisar logs de jogos, extraindo eventos relevantes e fornecendo APIs para consulta de estatísticas, rankings e métricas de jogadores. O sistema suporta processamento em background de arquivos grandes e possui mecanismos anti-duplicação inteligentes.
 
 ## ⚡ Funcionalidades
