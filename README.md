@@ -129,18 +129,6 @@ DB_PASSWORD=sua_senha
 php artisan migrate
 ```
 
-### 6. Configure a Queue (Opcional)
-Para processamento em background:
-```env
-QUEUE_CONNECTION=database
-```
-
-Execute a migration da queue:
-```bash
-php artisan queue:table
-php artisan migrate
-```
-
 ### 7. Configure o Storage
 ```bash
 php artisan storage:link
@@ -161,3 +149,11 @@ php artisan serve
 
 ## 📄 Documentação da API
 Ao acessar a rota raíz do projeto, você encontrará um botão linkado com a documentação da API com todas as informações necessárias para utilizar. Também, neste link [https://github.com/EdmilsonMedeiros/desafio_backend_ttz/blob/master/Insomnia_2025-08-09.yaml] está disponível um arquivo insomnia para importação de todas as rotas já configuradas e com paramêtros para facilitar os testes.
+
+### 🔑 CREDÊNCIAIS
+```bash
+admin@gmail.com
+```
+```bash
+admin
+```
