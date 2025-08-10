@@ -58,7 +58,6 @@ Este projeto foi desenvolvido para processar e analisar logs de jogos, extraindo
 
 #### Autenticação
 - ✅ Autenticação via Laravel Sanctum
-- ✅ Rotas públicas para desenvolvimento/teste
 
 ### 🎯 **Funcionalidades Extras Desenvolvidas**
 
@@ -77,7 +76,6 @@ Este projeto foi desenvolvido para processar e analisar logs de jogos, extraindo
 
 #### Otimizações
 - ✅ **Cache inteligente** para hashes de eventos
-- ✅ **Queries otimizadas** com índices compostos
 - ✅ **Paginação eficiente** em todos os endpoints
 - ✅ **Filtros avançados** por data, categoria, tipo
 
