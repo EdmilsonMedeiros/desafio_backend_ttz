@@ -160,4 +160,4 @@ php artisan serve
 ```
 
 ## 📄 Documentação da API
-Ao acessar a rota raíz do projeto, você encontrará um botão linkado com a documentação da API com todas as informações necessárias para utilizar. Também, neste link [https://link] está disponível um arquivo insomnia para importação de todas as rotas já configuradas e com paramêtros para facilitar os testes.
+Ao acessar a rota raíz do projeto, você encontrará um botão linkado com a documentação da API com todas as informações necessárias para utilizar. Também, neste link [https://github.com/EdmilsonMedeiros/desafio_backend_ttz/blob/master/Insomnia_2025-08-09.yaml] está disponível um arquivo insomnia para importação de todas as rotas já configuradas e com paramêtros para facilitar os testes.
