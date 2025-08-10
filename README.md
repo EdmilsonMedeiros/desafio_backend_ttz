@@ -98,7 +98,7 @@ Este projeto foi desenvolvido para processar e analisar logs de jogos, extraindo
 
 ### 1. Clone o Repositório
 ```bash
-git clone [https://github.com/EdmilsonMedeiros/desafio_backend_ttz.git]
+git clone https://github.com/EdmilsonMedeiros/desafio_backend_ttz.git
 cd api_ttz_project
 ```
 

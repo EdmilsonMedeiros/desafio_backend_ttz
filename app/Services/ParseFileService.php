@@ -195,7 +195,7 @@ class ParseFileService
             'event_data' => $this->normalizeEventDataForHash($eventData)
         ];
         
-        // ✅ CORREÇÃO: Usar serialize + ksort para garantir ordem consistente
+        // CORREÇÃO: Usar serialize + ksort para garantir ordem consistente
         ksort($hashData);
         $normalizedData = $this->arrayToSortedString($hashData);
         
@@ -408,7 +408,7 @@ class ParseFileService
             ->distinct()
             ->pluck('player_id');
 
-        // Processar diretamente para evitar complexidade desnecessária
+        // Processar diretamente
         foreach ($affectedPlayerIds as $playerId) {
             $this->updatePlayerStatsFromEvents($playerId);
         }
