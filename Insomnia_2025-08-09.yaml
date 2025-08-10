@@ -1,0 +1,706 @@
+type: collection.insomnia.rest/5.0
+name: TTZ_04-08-2025
+meta:
+  id: wrk_b574551c16e3429888691aaa42085819
+  created: 1754356647152
+  modified: 1754356647152
+  description: ""
+collection:
+  - name: TTZ-PROJECT
+    meta:
+      id: fld_d41a235b376d447ca3011dd132407cdf
+      created: 1754770816808
+      modified: 1754784111154
+      sortKey: -1754770817008
+      description: ""
+    children:
+      - url: http://127.0.0.1:8000/api/logout
+        name: Logout
+        meta:
+          id: req_fb95de4545df4086960ee68d557bb944
+          created: 1754770832123
+          modified: 1754780275117
+          isPrivate: false
+          description: ""
+          sortKey: -1754770843348
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email": "edmilsonjhm@gmail.com",
+            	"password": "12345678"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_c289afa1be8e43cb9e6b7598d2c1421f
+          - name: User-Agent
+            value: insomnia/11.3.0
+            id: pair_68f9b13b5c1745eaabff3bd1890421d3
+          - id: pair_cab65ada9cb842a690a2899f08c236c2
+            name: Authorization
+            value: Bearer 1|jUizkLVEtTU95mAebkXDvuPiojoi2FCJt4NVS7kj88a59fe2
+            description: ""
+            disabled: false
+          - id: pair_8fb3383522354077985e9faaa9fa99b0
+            name: Accept
+            value: application/json
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://127.0.0.1:8000/api/login
+        name: Login
+        meta:
+          id: req_02f9570ed8d34170a630d6e8ab90c220
+          created: 1754770839989
+          modified: 1754780271504
+          isPrivate: false
+          description: ""
+          sortKey: -1754770843448
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email": "admin@gmail.com",
+            	"password": "admin"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_bfd469f73189411a8af090b1e9bb8057
+          - name: User-Agent
+            value: insomnia/11.3.0
+            id: pair_6f1810f939e248eb95bf503c7b258929
+          - id: pair_1e28275ad1014ea1a05d5f67afd65bfc
+            name: Accept
+            value: application/json
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://127.0.0.1:8000/api/upload
+        name: Upload
+        meta:
+          id: req_55c1d22d7a8b4abe8fe0ef4e8a9b185a
+          created: 1754770931322
+          modified: 1754780474634
+          isPrivate: false
+          description: ""
+          sortKey: -1754770931322
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - id: pair_2c12c89f79f24d7db35843bfe5d67dd1
+              name: file
+              value: ""
+              description: ""
+              disabled: false
+              type: file
+              fileName: C:\Users\edmil\Downloads\game_log_reduzido.txt
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+            id: pair_b8af02fa5add4149b784719b736fb24c
+          - name: User-Agent
+            value: insomnia/11.4.0
+            id: pair_d8c921f741a34c779491c8a6f0323148
+          - id: pair_35ea7607af074a30a3620950288de870
+            name: Accept
+            value: application/json
+            description: ""
+            disabled: false
+          - id: pair_9a3a339b0a7e455e86922fc00785f227
+            name: Authorization
+            value: Bearer 2|Gc980Nv4rn4hZkL8Koedy9OJaGou86zyXUSsfSWw29a9111c
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://127.0.0.1:8000/api/players
+        name: /players
+        meta:
+          id: req_4e9a9e24f6864180ae46799e23fb357f
+          created: 1754774025466
+          modified: 1754780386608
+          isPrivate: false
+          description: ""
+          sortKey: -1754770931422
+        method: GET
+        body:
+          mimeType: multipart/form-data
+          params:
+            - id: pair_67a65cf245cc4ff19839e64eacf3d8b6
+              name: ""
+              value: ""
+              description: ""
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+            id: pair_b8af02fa5add4149b784719b736fb24c
+          - name: User-Agent
+            value: insomnia/11.4.0
+            id: pair_d8c921f741a34c779491c8a6f0323148
+          - id: pair_35ea7607af074a30a3620950288de870
+            name: Accept
+            value: application/json
+            description: ""
+            disabled: false
+          - id: pair_9a3a339b0a7e455e86922fc00785f227
+            name: Authorization
+            value: Bearer 2|Gc980Nv4rn4hZkL8Koedy9OJaGou86zyXUSsfSWw29a9111c
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://127.0.0.1:8000/api/players/p2/stats
+        name: /players/:id/stats
+        meta:
+          id: req_e8346b1c1f134fe499c41bcfe6e7fc92
+          created: 1754774115292
+          modified: 1754780413555
+          isPrivate: false
+          description: ""
+          sortKey: -1754770931372
+        method: GET
+        body:
+          mimeType: multipart/form-data
+          params:
+            - id: pair_eb512cb3acd24f348edf8c12591ad2a2
+              name: ""
+              value: ""
+              description: ""
+              disabled: false
+        parameters:
+          - id: pair_0ece133d33084d22810733eafbb26b35
+            name: ""
+            value: ""
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+            id: pair_b8af02fa5add4149b784719b736fb24c
+          - name: User-Agent
+            value: insomnia/11.4.0
+            id: pair_d8c921f741a34c779491c8a6f0323148
+          - id: pair_35ea7607af074a30a3620950288de870
+            name: Accept
+            value: application/json
+            description: ""
+            disabled: false
+          - id: pair_9a3a339b0a7e455e86922fc00785f227
+            name: Authorization
+            value: Bearer 2|Gc980Nv4rn4hZkL8Koedy9OJaGou86zyXUSsfSWw29a9111c
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://127.0.0.1:8000/api/leaderboard
+        name: /leaderboard
+        meta:
+          id: req_f8183fb1d5014f64802f74ee522be5ae
+          created: 1754774459297
+          modified: 1754780397231
+          isPrivate: false
+          description: ""
+          sortKey: -1754770931397
+        method: GET
+        body:
+          mimeType: multipart/form-data
+          params:
+            - id: pair_eb512cb3acd24f348edf8c12591ad2a2
+              name: ""
+              value: ""
+              description: ""
+              disabled: false
+        parameters:
+          - id: pair_0ece133d33084d22810733eafbb26b35
+            name: ""
+            value: ""
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+            id: pair_b8af02fa5add4149b784719b736fb24c
+          - name: User-Agent
+            value: insomnia/11.4.0
+            id: pair_d8c921f741a34c779491c8a6f0323148
+          - id: pair_35ea7607af074a30a3620950288de870
+            name: Accept
+            value: application/json
+            description: ""
+            disabled: false
+          - id: pair_9a3a339b0a7e455e86922fc00785f227
+            name: Authorization
+            value: Bearer 2|Gc980Nv4rn4hZkL8Koedy9OJaGou86zyXUSsfSWw29a9111c
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "http://127.0.0.1:8000/api/events "
+        name: /events
+        meta:
+          id: req_9fddb8d00c714775a4a94c94efd535ed
+          created: 1754774550961
+          modified: 1754780435694
+          isPrivate: false
+          description: ""
+          sortKey: -1754770931334.5
+        method: GET
+        body:
+          mimeType: multipart/form-data
+          params:
+            - id: pair_eb512cb3acd24f348edf8c12591ad2a2
+              name: ""
+              value: ""
+              description: ""
+              disabled: false
+        parameters:
+          - id: pair_0ece133d33084d22810733eafbb26b35
+            name: limit
+            value: "100"
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+            id: pair_b8af02fa5add4149b784719b736fb24c
+          - name: User-Agent
+            value: insomnia/11.4.0
+            id: pair_d8c921f741a34c779491c8a6f0323148
+          - id: pair_35ea7607af074a30a3620950288de870
+            name: Accept
+            value: application/json
+            description: ""
+            disabled: false
+          - id: pair_9a3a339b0a7e455e86922fc00785f227
+            name: Authorization
+            value: Bearer 2|Gc980Nv4rn4hZkL8Koedy9OJaGou86zyXUSsfSWw29a9111c
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://127.0.0.1:8000/api/items/top
+        name: /items/top
+        meta:
+          id: req_618c56b932754360ba77516bffe8d6ed
+          created: 1754774771018
+          modified: 1754780403483
+          isPrivate: false
+          description: ""
+          sortKey: -1754770931384.5
+        method: GET
+        body:
+          mimeType: multipart/form-data
+          params:
+            - id: pair_eb512cb3acd24f348edf8c12591ad2a2
+              name: ""
+              value: ""
+              description: ""
+              disabled: false
+        parameters:
+          - id: pair_12d3ca880b884387b59fad00989e3988
+            name: ""
+            value: ""
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+            id: pair_b8af02fa5add4149b784719b736fb24c
+          - name: User-Agent
+            value: insomnia/11.4.0
+            id: pair_d8c921f741a34c779491c8a6f0323148
+          - id: pair_35ea7607af074a30a3620950288de870
+            name: Accept
+            value: application/json
+            description: ""
+            disabled: false
+          - id: pair_9a3a339b0a7e455e86922fc00785f227
+            name: Authorization
+            value: Bearer 2|Gc980Nv4rn4hZkL8Koedy9OJaGou86zyXUSsfSWw29a9111c
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://127.0.0.1:8000/api/dashboard
+        name: /dashboard
+        meta:
+          id: req_7ee740939d154a4299f81b0efd201a55
+          created: 1754774896955
+          modified: 1754780445907
+          isPrivate: false
+          description: ""
+          sortKey: -1754770931328.25
+        method: GET
+        body:
+          mimeType: multipart/form-data
+          params:
+            - id: pair_eb512cb3acd24f348edf8c12591ad2a2
+              name: ""
+              value: ""
+              description: ""
+              disabled: false
+        parameters:
+          - id: pair_fb726d8a1c474a069bf052b8ca31352c
+            name: ""
+            value: ""
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+            id: pair_b8af02fa5add4149b784719b736fb24c
+          - name: User-Agent
+            value: insomnia/11.4.0
+            id: pair_d8c921f741a34c779491c8a6f0323148
+          - id: pair_35ea7607af074a30a3620950288de870
+            name: Accept
+            value: application/json
+            description: ""
+            disabled: false
+          - id: pair_9a3a339b0a7e455e86922fc00785f227
+            name: Authorization
+            value: Bearer 2|Gc980Nv4rn4hZkL8Koedy9OJaGou86zyXUSsfSWw29a9111c
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://127.0.0.1:8000/api/events/summary
+        name: /events/summary (RESUMO DOS EVENTOS)
+        meta:
+          id: req_6944342ac83449319b1cafdbf27cab05
+          created: 1754775057357
+          modified: 1754780452217
+          isPrivate: false
+          description: ""
+          sortKey: -1754770931325.125
+        method: GET
+        body:
+          mimeType: multipart/form-data
+          params:
+            - id: pair_eb512cb3acd24f348edf8c12591ad2a2
+              name: ""
+              value: ""
+              description: ""
+              disabled: false
+        parameters:
+          - id: pair_fb726d8a1c474a069bf052b8ca31352c
+            name: ""
+            value: ""
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+            id: pair_b8af02fa5add4149b784719b736fb24c
+          - name: User-Agent
+            value: insomnia/11.4.0
+            id: pair_d8c921f741a34c779491c8a6f0323148
+          - id: pair_35ea7607af074a30a3620950288de870
+            name: Accept
+            value: application/json
+            description: ""
+            disabled: false
+          - id: pair_9a3a339b0a7e455e86922fc00785f227
+            name: Authorization
+            value: Bearer 2|Gc980Nv4rn4hZkL8Koedy9OJaGou86zyXUSsfSWw29a9111c
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://127.0.0.1:8000/api/items
+        name: /items (TODOS OS ITENS)
+        meta:
+          id: req_53e5c1e418664c1585ea9efc7048dc1c
+          created: 1754775137346
+          modified: 1754780460360
+          isPrivate: false
+          description: ""
+          sortKey: -1754770931323.5625
+        method: GET
+        body:
+          mimeType: multipart/form-data
+          params:
+            - id: pair_eb512cb3acd24f348edf8c12591ad2a2
+              name: ""
+              value: ""
+              description: ""
+              disabled: false
+        parameters:
+          - id: pair_fb726d8a1c474a069bf052b8ca31352c
+            name: ""
+            value: ""
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+            id: pair_b8af02fa5add4149b784719b736fb24c
+          - name: User-Agent
+            value: insomnia/11.4.0
+            id: pair_d8c921f741a34c779491c8a6f0323148
+          - id: pair_35ea7607af074a30a3620950288de870
+            name: Accept
+            value: application/json
+            description: ""
+            disabled: false
+          - id: pair_9a3a339b0a7e455e86922fc00785f227
+            name: Authorization
+            value: Bearer 2|Gc980Nv4rn4hZkL8Koedy9OJaGou86zyXUSsfSWw29a9111c
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://127.0.0.1:8000/api/items/health_potion/stats
+        name: /items/:name/stats (ESTATISTICA ITEM ESPECIFICO)
+        meta:
+          id: req_aebd36be911744df93b92d7ce2bbe513
+          created: 1754775181111
+          modified: 1754780467629
+          isPrivate: false
+          description: ""
+          sortKey: -1754770931322.7812
+        method: GET
+        body:
+          mimeType: multipart/form-data
+          params:
+            - id: pair_eb512cb3acd24f348edf8c12591ad2a2
+              name: ""
+              value: ""
+              description: ""
+              disabled: false
+        parameters:
+          - id: pair_fb726d8a1c474a069bf052b8ca31352c
+            name: ""
+            value: ""
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+            id: pair_b8af02fa5add4149b784719b736fb24c
+          - name: User-Agent
+            value: insomnia/11.4.0
+            id: pair_d8c921f741a34c779491c8a6f0323148
+          - id: pair_35ea7607af074a30a3620950288de870
+            name: Accept
+            value: application/json
+            description: ""
+            disabled: false
+          - id: pair_9a3a339b0a7e455e86922fc00785f227
+            name: Authorization
+            value: Bearer 2|Gc980Nv4rn4hZkL8Koedy9OJaGou86zyXUSsfSWw29a9111c
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://127.0.0.1:8000/api/upload/3/status
+        name: /upload/{uploadedFileId}/status (STATUS DO PROCESSAMENTO DO ARQUIVO)
+        meta:
+          id: req_06b3bff8227b41979978ff4ce5313194
+          created: 1754779446959
+          modified: 1754780481105
+          isPrivate: false
+          description: ""
+          sortKey: -1754770904754.5
+        method: GET
+        body:
+          mimeType: multipart/form-data
+          params:
+            - id: pair_2c12c89f79f24d7db35843bfe5d67dd1
+              name: file
+              value: ""
+              description: ""
+              disabled: false
+              type: file
+              fileName: C:\Users\edmil\Downloads\game_log_reduzido.txt
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+            id: pair_b8af02fa5add4149b784719b736fb24c
+          - name: User-Agent
+            value: insomnia/11.4.0
+            id: pair_d8c921f741a34c779491c8a6f0323148
+          - id: pair_35ea7607af074a30a3620950288de870
+            name: Accept
+            value: application/json
+            description: ""
+            disabled: false
+          - id: pair_9a3a339b0a7e455e86922fc00785f227
+            name: Authorization
+            value: Bearer 2|Gc980Nv4rn4hZkL8Koedy9OJaGou86zyXUSsfSWw29a9111c
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://127.0.0.1:8000/api/uploads
+        name: /uploads (LISTA OS UPLOADS REALIZADOS)
+        meta:
+          id: req_5b26ec496f9d4033ba1d873d5dd70de0
+          created: 1754780190499
+          modified: 1754780595594
+          isPrivate: false
+          description: ""
+          sortKey: -1754770891470.75
+        method: GET
+        body:
+          mimeType: multipart/form-data
+          params:
+            - id: pair_2c12c89f79f24d7db35843bfe5d67dd1
+              name: file
+              value: ""
+              description: ""
+              disabled: false
+              type: file
+              fileName: C:\Users\edmil\Downloads\game_log_reduzido.txt
+        parameters:
+          - id: pair_815d395f11f6455f9780dba46c37331d
+            name: per_page
+            value: "5"
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+            id: pair_b8af02fa5add4149b784719b736fb24c
+          - name: User-Agent
+            value: insomnia/11.4.0
+            id: pair_d8c921f741a34c779491c8a6f0323148
+          - id: pair_35ea7607af074a30a3620950288de870
+            name: Accept
+            value: application/json
+            description: ""
+            disabled: false
+          - id: pair_9a3a339b0a7e455e86922fc00785f227
+            name: Authorization
+            value: Bearer 2|Gc980Nv4rn4hZkL8Koedy9OJaGou86zyXUSsfSWw29a9111c
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_f6addb9dc3665ae503bf0bd967ecd682462696c3
+    created: 1754356647165
+    modified: 1754364605810
+  cookies:
+    - key: XSRF-TOKEN
+      value: eyJpdiI6IjBVTEpLdlhsajVYMEhEelpWY242UUE9PSIsInZhbHVlIjoidHpwdkdXTTcyMXVNK1lJcHVTUFhCckFpYkw0Um9SRi9oTzFSWXVzcXJtZkJBWXFpM01pOWNKTG9ZWFU4Q0duZ01jTURTcGFLbTcyOWNQSTdNVHN4S0lHSGd3aDdUUWVMekc1MmJMOVpWbHdBeVQ1NnJtYTF3a2FxMWtaSy91TzEiLCJtYWMiOiIzNDllNmFhNDgxYWI0ZTY1MTE4MTg1MWVmMDA5YjYwZTAxN2ViNDA2MDI2MGMwMDc3MGEzNjdjODU5YjQzYWUxIiwidGFnIjoiIn0%3D
+      maxAge: 7200
+      domain: 127.0.0.1
+      path: /
+      hostOnly: true
+      creation: 2025-08-05T01:27:36.526Z
+      lastAccessed: 2025-08-05T03:30:05.808Z
+      sameSite: lax
+      id: 95bfdb19-4e73-4a15-b885-b504824cf682
+    - key: laravel_session
+      value: eyJpdiI6IktEKzMzTDB6L0VSVis5dTQ1aERMWkE9PSIsInZhbHVlIjoiSi92U2ZPQjhuU0NwY1JoUGJaeFNUaWxneGlaTUtmM2IxbHk3QVJwOW5ueW4zTHhlTUxaaXlRUWZvaFphVGNlRVliVGY0aGxaUlR2YjNlWS96ZTROUWw0bVUvUTJ3ZlQ2UGhNc0pURk1NUkVvdXhNclF2N3VKZXV2clNITGtOeXAiLCJtYWMiOiI4ZDQ1OTA5Mjg1YjM2YjQ3MzVkYzA3MGNhYzEzOGNhOTBlYzUyYWM0ZTkzMThmNGQwOGM0NGU5YTRlZDc4MWJkIiwidGFnIjoiIn0%3D
+      maxAge: 7200
+      domain: 127.0.0.1
+      path: /
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-08-05T01:27:36.527Z
+      lastAccessed: 2025-08-05T03:30:05.809Z
+      sameSite: lax
+      id: 19835c6f-14ce-40c2-a865-6e6ea51cd74e
+environments:
+  name: Base Environment
+  meta:
+    id: env_f6addb9dc3665ae503bf0bd967ecd682462696c3
+    created: 1754356647160
+    modified: 1754356647160
+    isPrivate: false
